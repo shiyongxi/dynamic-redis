@@ -1,0 +1,52 @@
+server:
+  port: 8080
+  undertow:
+    accesslog:
+      enabled: true
+      dir: ./logs
+      pattern: common
+      prefix: access_log
+      suffix: .log
+    io-threads: 4
+    worker-threads: 32
+    buffer-size: 1024
+    direct-buffers: true
+
+spring:
+  application:
+    name: dynamic-redis-service
+
+  data:
+    dynamic:
+      redis:
+        primary: one
+        pools:
+          one:
+            host: 127.0.0.1
+            password:
+            database: 1
+            timeout: 3s
+            lettuce:
+              pool:
+                max-active: 8
+                max-idle: 8
+                min-idle: 1
+                max-wait: 3s
+          two:
+            host: 127.0.0.1
+            password:
+            database: 2
+            timeout: 3s
+            lettuce:
+              pool:
+                max-active: 8
+                max-idle: 8
+                min-idle: 1
+                max-wait: 3s
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
