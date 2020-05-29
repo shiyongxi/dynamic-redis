@@ -24,7 +24,7 @@ public class DemoController {
     private DemoService demoService;
 
     @RequestMapping("/set")
-    @RedisPool("one")
+    @RedisPool("two")
     public String set(@RequestParam("key") String key, @RequestParam("value") String value) {
         stringRedisTemplate.opsForValue().set(key, value);
 
