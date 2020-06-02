@@ -16,7 +16,6 @@
 
 
     <properties>
-
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
@@ -26,78 +25,16 @@
         <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
 
         <!-- spring & spring boot & spring cloud -->
-        <spring-platform.version>Cairo-SR7</spring-platform.version>
         <spring-cloud.version>Greenwich.SR5</spring-cloud.version>
         <spring-boot.version>2.1.13.RELEASE</spring-boot.version>
 
-        <!-- spring boot starter -->
-        <spring-boot-druid.version>1.1.21</spring-boot-druid.version>
-        <spring-boot-mybatis.version>2.1.1</spring-boot-mybatis.version>
-        <spring-boot-pagehelper.version>1.2.12</spring-boot-pagehelper.version>
-        <tkmapper-spring-boot-starter.version>2.1.5</tkmapper-spring-boot-starter.version>
-        <mybatis-plus-boot-starter.version>3.3.0</mybatis-plus-boot-starter.version>
-
-        <!-- spring cloud kubernetes -->
-        <spring-cloud-kubernetes.version>1.1.1.RELEASE</spring-cloud-kubernetes.version>
-
-        <!-- api swagger -->
-        <springfox-common.version>2.9.2</springfox-common.version>
-        <swagger-annotations.version>1.5.22</swagger-annotations.version>
-
-        <!-- db connector -->
-        <mysql-connector-java.version>5.1.48</mysql-connector-java.version>
-        <h2database.version>1.4.197</h2database.version>
-
-        <!-- jpa & hibernate -->
-        <validation-api.version>2.0.1.Final</validation-api.version>
-        <hibernate-validator.version>5.4.2.Final</hibernate-validator.version>
-        <hibernate-core.version>5.3.7.Final</hibernate-core.version>
-        <hibernate-jpa-2.1-api.version>1.0.2.Final</hibernate-jpa-2.1-api.version>
-
-        <!-- jackson -->
-        <jackson-common.version>2.9.10</jackson-common.version>
-        <jackson-datatype-money.version>1.1.1</jackson-datatype-money.version>
-        <moneta.version>1.3</moneta.version>
-
-        <opentracing.version>0.33.0</opentracing.version>
-        <jaeger-client.version>1.1.0-SNAPSHOT</jaeger-client.version>
-        <opentracing-reactor.version>0.1.2</opentracing-reactor.version>
-        <opentracing-concurrent.version>0.4.0</opentracing-concurrent.version>
-        <opentracing-mongo.version>0.1.4</opentracing-mongo.version>
-
-        <!-- metrics -->
-        <micrometer-core.version>1.3.1</micrometer-core.version>
-        <micrometer-registry-prometheus.version>1.3.1</micrometer-registry-prometheus.version>
+        <!-- others -->
+        <lombok.version>1.18.10</lombok.version>
+        <slf4j-api.version>1.7.29</slf4j-api.version>
 
         <!-- servlet -->
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
 
-        <!-- others -->
-        <lombok.version>1.18.10</lombok.version>
-        <hutool-all.version>5.1.0</hutool-all.version>
-        <slf4j-api.version>1.7.29</slf4j-api.version>
-        <httpclient.version>4.5.9</httpclient.version>
-        <httpasyncclient.version>4.1.1</httpasyncclient.version>
-        <cglib.version>3.3.0</cglib.version>
-        <javassist.version>3.26.0-GA</javassist.version>
-        <junit.version>4.12</junit.version>
-        <reactor-core.version>3.2.12.RELEASE</reactor-core.version>
-
-        <jsqlparser.version>2.0</jsqlparser.version>
-
-        <!-- sharding jdbc -->
-        <sharding-jdbc-spring-boot-starter.version>3.1.0</sharding-jdbc-spring-boot-starter.version>
-        <sharding-core.version>3.1.0.2</sharding-core.version>
-        <shardingsphere.version>3.1.0.2</shardingsphere.version>
-
-        <!-- rocketmq-->
-        <rocketmq-spring-boot-starter.version>2.1.0</rocketmq-spring-boot-starter.version>
-        <rocketmq-client.version>4.6.0</rocketmq-client.version>
-        <!-- mapstruct -->
-        <mapstruct-jdk8.version>1.3.1.Final</mapstruct-jdk8.version>
-        <mapstruct-processor.version>1.3.1.Final</mapstruct-processor.version>
-
-        <logback-mdc-ttl.version>1.0.2</logback-mdc-ttl.version>
         <snappy-java.version>1.1.7.2</snappy-java.version>
     </properties>
 
@@ -118,9 +55,9 @@
             </dependency>
 
             <dependency>
-                <groupId>jakarta.servlet</groupId>
-                <artifactId>jakarta.servlet-api</artifactId>
-                <version>4.0.3</version>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${javax.servlet-api.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
