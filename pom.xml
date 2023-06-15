@@ -35,7 +35,7 @@
         <!-- servlet -->
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
 
-        <snappy-java.version>1.1.7.2</snappy-java.version>
+        <snappy-java.version>1.1.10.1</snappy-java.version>
     </properties>
 
     <dependencyManagement>
